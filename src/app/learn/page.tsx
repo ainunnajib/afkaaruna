@@ -94,37 +94,48 @@ export default function LearnPage() {
 
   const renderTopicList = (topics: TopicItem[], category: 'nahwu' | 'shorof') => (
     <div className="space-y-3">
-      {topics.map((topic, index) => (
-        <Card
-          key={topic.id}
-          variant="game"
-          className={topic.locked ? 'opacity-60' : ''}
-        >
-          <CardContent className="py-4">
-            <div className="flex items-center gap-4">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold ${
-                category === 'nahwu' ? 'bg-blue-500' : 'bg-green-500'
-              }`}>
-                {index + 1}
+      {topics.map((topic, index) => {
+        const cardContent = (
+          <Card
+            variant="game"
+            className={`${topic.locked ? 'opacity-60' : 'cursor-pointer hover:border-primary'}`}
+          >
+            <CardContent className="py-4">
+              <div className="flex items-center gap-4">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold ${
+                  category === 'nahwu' ? 'bg-blue-500' : 'bg-green-500'
+                }`}>
+                  {index + 1}
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold">{topic.title[language]}</h3>
+                  <p className="text-sm text-muted">{topic.description[language]}</p>
+                  {!topic.locked && topic.progress > 0 && (
+                    <Progress value={topic.progress} max={100} className="mt-2 h-1.5" />
+                  )}
+                </div>
+                <div className="flex items-center">
+                  {topic.locked ? (
+                    <Lock className="w-5 h-5 text-muted" />
+                  ) : (
+                    <ChevronRight className="w-5 h-5 text-muted" />
+                  )}
+                </div>
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold">{topic.title[language]}</h3>
-                <p className="text-sm text-muted">{topic.description[language]}</p>
-                {!topic.locked && topic.progress > 0 && (
-                  <Progress value={topic.progress} max={100} className="mt-2 h-1.5" />
-                )}
-              </div>
-              <div className="flex items-center">
-                {topic.locked ? (
-                  <Lock className="w-5 h-5 text-muted" />
-                ) : (
-                  <ChevronRight className="w-5 h-5 text-muted" />
-                )}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
+            </CardContent>
+          </Card>
+        );
+
+        if (topic.locked) {
+          return <div key={topic.id}>{cardContent}</div>;
+        }
+
+        return (
+          <Link key={topic.id} href={`/learn/${category}/${topic.id}`}>
+            {cardContent}
+          </Link>
+        );
+      })}
     </div>
   );
 
