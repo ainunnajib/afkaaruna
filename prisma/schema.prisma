@@ -1,0 +1,123 @@
+// Prisma Schema for Afkaaruna - Arabic Grammar Learning Game
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model
+model User {
+  id                String    @id @default(cuid())
+  email             String    @unique
+  name              String?
+  avatar            String?
+  currentLevel      Int       @default(1)
+  totalXP           Int       @default(0)
+  preferredLanguage String    @default("id") // id, ar, en
+  streak            Int       @default(0)
+  lastActiveAt      DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  // Relations
+  progress     Progress[]
+  achievements UserAchievement[]
+  sessions     GameSession[]
+}
+
+// Progress tracking per topic
+model Progress {
+  id          String    @id @default(cuid())
+  userId      String
+  topicId     String
+  starsEarned Int       @default(0) // 0, 1, 2, or 3
+  bestScore   Int       @default(0)
+  attempts    Int       @default(0)
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, topicId])
+  @@index([userId])
+  @@index([topicId])
+}
+
+// Game session records
+model GameSession {
+  id        String   @id @default(cuid())
+  userId    String
+  gameType  String // word-builder, sentence-doctor, etc.
+  topicId   String?
+  score     Int
+  maxScore  Int
+  duration  Int // in seconds
+  mistakes  Json // Array of mistake objects
+  createdAt DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([gameType])
+  @@index([createdAt])
+}
+
+// Achievement types
+model Achievement {
+  id          String @id @default(cuid())
+  type        String @unique
+  name_id     String
+  name_ar     String
+  name_en     String
+  description_id String
+  description_ar String
+  description_en String
+  icon        String
+  xpReward    Int    @default(0)
+
+  // Relations
+  users UserAchievement[]
+}
+
+// User achievements (many-to-many)
+model UserAchievement {
+  id            String   @id @default(cuid())
+  userId        String
+  achievementId String
+  unlockedAt    DateTime @default(now())
+
+  // Relations
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, achievementId])
+  @@index([userId])
+}
+
+// Topics (Nahwu/Shorof lessons)
+model Topic {
+  id           String @id @default(cuid())
+  category     String // nahwu, shorof
+  order        Int
+  slug         String @unique
+  title_id     String
+  title_ar     String
+  title_en     String
+  description_id String
+  description_ar String
+  description_en String
+  requiredLevel Int   @default(1)
+  isActive     Boolean @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([category])
+  @@index([order])
+}
