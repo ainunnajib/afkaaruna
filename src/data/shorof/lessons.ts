@@ -274,6 +274,157 @@ export const shorofLessons: Record<string, LessonContent> = {
       },
     ],
   },
+
+  'isim-makan': {
+    id: 'isim-makan',
+    title: { id: 'Isim Makan', ar: 'اسم المكان', en: 'Noun of Place' },
+    description: {
+      id: 'Pelajari pola pembentukan isim makan (kata tempat) dalam bahasa Arab',
+      ar: 'تعلم صيغ تكوين اسم المكان في اللغة العربية',
+      en: 'Learn the patterns for forming nouns of place in Arabic',
+    },
+    sections: [
+      {
+        type: 'explanation',
+        title: { id: 'Apa itu Isim Makan?', ar: 'ما هو اسم المكان؟', en: 'What is Isim Makan?' },
+        content: {
+          id: 'Isim Makan adalah kata benda yang menunjukkan tempat terjadinya suatu perbuatan. Dibentuk dari akar kata fi\'il dengan pola مَفْعَل (maf\'al) atau مَفْعِل (maf\'il).',
+          ar: 'اسم المكان هو اسم مشتق يدل على مكان وقوع الفعل. يُشتق من الفعل على وزن مَفْعَل أو مَفْعِل.',
+          en: 'Isim Makan is a derived noun indicating the place where an action occurs. It is derived from verbs using the pattern مَفْعَل (maf\'al) or مَفْعِل (maf\'il).',
+        },
+      },
+      {
+        type: 'explanation',
+        title: { id: 'Kapan Pakai مَفْعَل dan مَفْعِل?', ar: 'متى نستخدم مَفْعَل ومَفْعِل؟', en: 'When to use مَفْعَل vs مَفْعِل?' },
+        content: {
+          id: 'Pola مَفْعَل digunakan jika fi\'il mudhari\'nya berharakat fathah atau dhammah pada \'ain fi\'il (huruf kedua). Pola مَفْعِل digunakan jika fi\'il mudhari\'nya berharakat kasrah pada \'ain fi\'il.',
+          ar: 'يُستخدم وزن مَفْعَل إذا كان عين المضارع مفتوحاً أو مضموماً. يُستخدم وزن مَفْعِل إذا كان عين المضارع مكسوراً.',
+          en: 'Pattern مَفْعَل is used when the present verb has fatha or damma on the middle letter. Pattern مَفْعِل is used when it has kasra.',
+        },
+      },
+      {
+        type: 'example',
+        title: { id: 'Contoh Pola مَفْعَل', ar: 'أمثلة وزن مَفْعَل', en: 'Examples of مَفْعَل' },
+        content: {
+          id: 'Kata-kata tempat dengan pola مَفْعَل:',
+          ar: 'كلمات المكان على وزن مَفْعَل:',
+          en: 'Place nouns with pattern مَفْعَل:',
+        },
+        breakdown: [
+          { word: 'مَكْتَب', role: 'ك-ت-ب', explanation: { id: 'Kantor/meja tulis (tempat menulis)', ar: 'مكان الكتابة', en: 'Office/desk (place of writing)' } },
+          { word: 'مَدْرَسَة', role: 'د-ر-س', explanation: { id: 'Sekolah (tempat belajar)', ar: 'مكان الدراسة', en: 'School (place of study)' } },
+          { word: 'مَلْعَب', role: 'ل-ع-ب', explanation: { id: 'Lapangan (tempat bermain)', ar: 'مكان اللعب', en: 'Playground (place of play)' } },
+          { word: 'مَطْبَخ', role: 'ط-ب-خ', explanation: { id: 'Dapur (tempat memasak)', ar: 'مكان الطبخ', en: 'Kitchen (place of cooking)' } },
+          { word: 'مَدْخَل', role: 'د-خ-ل', explanation: { id: 'Pintu masuk (tempat masuk)', ar: 'مكان الدخول', en: 'Entrance (place of entering)' } },
+        ],
+      },
+      {
+        type: 'example',
+        title: { id: 'Contoh Pola مَفْعِل', ar: 'أمثلة وزن مَفْعِل', en: 'Examples of مَفْعِل' },
+        content: {
+          id: 'Kata-kata tempat dengan pola مَفْعِل:',
+          ar: 'كلمات المكان على وزن مَفْعِل:',
+          en: 'Place nouns with pattern مَفْعِل:',
+        },
+        breakdown: [
+          { word: 'مَسْجِد', role: 'س-ج-د', explanation: { id: 'Masjid (tempat sujud)', ar: 'مكان السجود', en: 'Mosque (place of prostration)' } },
+          { word: 'مَجْلِس', role: 'ج-ل-س', explanation: { id: 'Majelis (tempat duduk)', ar: 'مكان الجلوس', en: 'Council (place of sitting)' } },
+          { word: 'مَعْرِض', role: 'ع-ر-ض', explanation: { id: 'Pameran (tempat memamerkan)', ar: 'مكان العرض', en: 'Exhibition (place of display)' } },
+          { word: 'مَنْزِل', role: 'ن-ز-ل', explanation: { id: 'Rumah (tempat turun/singgah)', ar: 'مكان النزول', en: 'House (place of descending)' } },
+        ],
+      },
+      {
+        type: 'rule',
+        title: { id: 'Kaidah Penting', ar: 'قاعدة مهمة', en: 'Important Rule' },
+        content: {
+          id: '1. Isim makan selalu dimulai dengan huruf mim berharakat fathah (مَـ)\n2. Pola مَفْعَل: jika mudhari\' ya-f\'alu atau ya-f\'ulu\n3. Pola مَفْعِل: jika mudhari\' ya-f\'ilu\n4. Beberapa isim makan mendapat ta\' marbuthah: مَدْرَسَة، مَكْتَبَة',
+          ar: '١. اسم المكان يبدأ دائماً بميم مفتوحة (مَـ)\n٢. وزن مَفْعَل: إذا كان المضارع يَفْعَلُ أو يَفْعُلُ\n٣. وزن مَفْعِل: إذا كان المضارع يَفْعِلُ\n٤. بعض أسماء المكان تلحقها تاء مربوطة: مَدْرَسَة، مَكْتَبَة',
+          en: '1. Isim makan always starts with mim with fatha (مَـ)\n2. Pattern مَفْعَل: when present is ya-f\'alu or ya-f\'ulu\n3. Pattern مَفْعِل: when present is ya-f\'ilu\n4. Some place nouns get ta marbuta: مَدْرَسَة، مَكْتَبَة',
+        },
+      },
+      {
+        type: 'practice',
+        title: { id: 'Latihan', ar: 'تدريب', en: 'Practice' },
+        content: {
+          id: 'Mainkan Word Builder untuk berlatih membentuk isim makan dari berbagai akar kata!',
+          ar: 'العب بناء الكلمات للتدرب على تكوين اسم المكان من جذور مختلفة!',
+          en: 'Play Word Builder to practice forming place nouns from various roots!',
+        },
+      },
+    ],
+  },
+  'tashrif-fiil': {
+    id: 'tashrif-fiil',
+    title: { id: 'Tashrif Fi\'il', ar: 'تصريف الفعل', en: 'Verb Conjugation' },
+    description: {
+      id: 'Pelajari cara mentashrif (mengkonjugasikan) fi\'il dalam berbagai dhamir',
+      ar: 'تعلم كيفية تصريف الفعل مع الضمائر المختلفة',
+      en: 'Learn how to conjugate verbs with different pronouns',
+    },
+    sections: [
+      {
+        type: 'explanation',
+        title: { id: 'Apa itu Tashrif?', ar: 'ما هو التصريف؟', en: 'What is Tashrif?' },
+        content: {
+          id: 'Tashrif adalah perubahan bentuk kata kerja (fi\'il) berdasarkan pelaku (dhamir/kata ganti). Dalam bahasa Arab, fi\'il berubah untuk 14 bentuk dhamir. Kita akan fokus pada yang paling umum: هو، هي، أنا، أنتَ، أنتِ، نحن، هم.',
+          ar: 'التصريف هو تغيير صيغة الفعل حسب الفاعل (الضمير). في العربية، يتغير الفعل لـ ١٤ ضميراً. سنركز على أهمها: هو، هي، أنا، أنتَ، أنتِ، نحن، هم.',
+          en: 'Tashrif is changing the verb form based on the subject (pronoun). In Arabic, verbs change for 14 pronouns. We\'ll focus on the most common: هو، هي، أنا، أنتَ، أنتِ، نحن، هم.',
+        },
+      },
+      {
+        type: 'explanation',
+        title: { id: 'Fi\'il Madhi (Lampau)', ar: 'الفعل الماضي', en: 'Past Tense' },
+        content: {
+          id: 'Fi\'il madhi diubah dengan menambahkan akhiran pada fi\'il dasar:\n- هو (dia lk): كَتَبَ (bentuk dasar)\n- هي (dia pr): كَتَبَتْ (+تْ)\n- أنا (saya): كَتَبْتُ (+تُ)\n- أنتَ (kamu lk): كَتَبْتَ (+تَ)\n- أنتِ (kamu pr): كَتَبْتِ (+تِ)\n- نحن (kami): كَتَبْنَا (+نَا)\n- هم (mereka lk): كَتَبُوا (+وا)',
+          ar: 'يتغير الفعل الماضي بإضافة لواحق:\n- هو: كَتَبَ (الصيغة الأساسية)\n- هي: كَتَبَتْ (+تْ)\n- أنا: كَتَبْتُ (+تُ)\n- أنتَ: كَتَبْتَ (+تَ)\n- أنتِ: كَتَبْتِ (+تِ)\n- نحن: كَتَبْنَا (+نَا)\n- هم: كَتَبُوا (+وا)',
+          en: 'Past tense changes by adding suffixes:\n- هو (he): كَتَبَ (base form)\n- هي (she): كَتَبَتْ (+تْ)\n- أنا (I): كَتَبْتُ (+تُ)\n- أنتَ (you m): كَتَبْتَ (+تَ)\n- أنتِ (you f): كَتَبْتِ (+تِ)\n- نحن (we): كَتَبْنَا (+نَا)\n- هم (they m): كَتَبُوا (+وا)',
+        },
+      },
+      {
+        type: 'explanation',
+        title: { id: 'Fi\'il Mudhari\' (Sekarang)', ar: 'الفعل المضارع', en: 'Present Tense' },
+        content: {
+          id: 'Fi\'il mudhari\' diubah dengan menambahkan awalan (dan kadang akhiran):\n- هو: يَكْتُبُ (يـ)\n- هي: تَكْتُبُ (تـ)\n- أنا: أَكْتُبُ (أ)\n- أنتَ: تَكْتُبُ (تـ)\n- نحن: نَكْتُبُ (نـ)\n- هم: يَكْتُبُونَ (يـ...ونَ)',
+          ar: 'يتغير المضارع بإضافة سوابق (وأحياناً لواحق):\n- هو: يَكْتُبُ (يـ)\n- هي: تَكْتُبُ (تـ)\n- أنا: أَكْتُبُ (أ)\n- أنتَ: تَكْتُبُ (تـ)\n- نحن: نَكْتُبُ (نـ)\n- هم: يَكْتُبُونَ (يـ...ونَ)',
+          en: 'Present tense changes with prefixes (and sometimes suffixes):\n- هو (he): يَكْتُبُ (يـ)\n- هي (she): تَكْتُبُ (تـ)\n- أنا (I): أَكْتُبُ (أ)\n- أنتَ (you m): تَكْتُبُ (تـ)\n- نحن (we): نَكْتُبُ (نـ)\n- هم (they m): يَكْتُبُونَ (يـ...ونَ)',
+        },
+      },
+      {
+        type: 'example',
+        title: { id: 'Contoh Lengkap: ذَهَبَ', ar: 'مثال كامل: ذَهَبَ', en: 'Full Example: ذَهَبَ' },
+        content: {
+          id: 'Tashrif kata kerja ذَهَبَ (pergi):',
+          ar: 'تصريف فعل ذَهَبَ:',
+          en: 'Conjugation of ذَهَبَ (to go):',
+        },
+        breakdown: [
+          { word: 'ذَهَبَ / يَذْهَبُ', role: 'هو', explanation: { id: 'Dia (lk): pergi / sedang pergi', ar: 'هو ذهب / يذهب', en: 'He went / goes' } },
+          { word: 'ذَهَبَتْ / تَذْهَبُ', role: 'هي', explanation: { id: 'Dia (pr): pergi / sedang pergi', ar: 'هي ذهبت / تذهب', en: 'She went / goes' } },
+          { word: 'ذَهَبْتُ / أَذْهَبُ', role: 'أنا', explanation: { id: 'Saya: pergi / sedang pergi', ar: 'أنا ذهبت / أذهب', en: 'I went / go' } },
+          { word: 'ذَهَبْنَا / نَذْهَبُ', role: 'نحن', explanation: { id: 'Kami: pergi / sedang pergi', ar: 'نحن ذهبنا / نذهب', en: 'We went / go' } },
+          { word: 'ذَهَبُوا / يَذْهَبُونَ', role: 'هم', explanation: { id: 'Mereka (lk): pergi / sedang pergi', ar: 'هم ذهبوا / يذهبون', en: 'They went / go' } },
+        ],
+      },
+      {
+        type: 'rule',
+        title: { id: 'Kaidah Penting', ar: 'قاعدة مهمة', en: 'Important Rule' },
+        content: {
+          id: '1. Huruf mudhari\' (awalan fi\'il mudhari\'): أ ن ت ي (disingkat أَنَيْتُ)\n2. Fi\'il madhi mabni (tetap), mudhari\' mu\'rab (bisa berubah)\n3. Harakat \'ain mudhari\' bisa fathah, dhammah, atau kasrah tergantung bab-nya\n4. Fi\'il amr dibentuk dari mudhari\' dengan membuang huruf mudhari\' dan menambah hamzah washl jika perlu',
+          ar: '١. حروف المضارعة: أ ن ت ي (أنيت)\n٢. الماضي مبني والمضارع معرب\n٣. حركة عين المضارع تختلف حسب الباب (يَفْعُلُ، يَفْعَلُ، يَفْعِلُ)\n٤. فعل الأمر يُشتق من المضارع بحذف حرف المضارعة',
+          en: '1. Present tense prefixes: أ ن ت ي (anitya)\n2. Past is indeclinable; present is declinable\n3. Middle vowel of present varies by verb class (fatha, damma, or kasra)\n4. Imperative is derived from present by removing the prefix letter',
+        },
+      },
+      {
+        type: 'practice',
+        title: { id: 'Latihan', ar: 'تدريب', en: 'Practice' },
+        content: {
+          id: 'Mainkan Conjugation Race untuk berlatih mentashrif fi\'il dengan cepat!',
+          ar: 'العب سباق التصريف للتدرب على تصريف الأفعال بسرعة!',
+          en: 'Play Conjugation Race to practice conjugating verbs quickly!',
+        },
+      },
+    ],
+  },
 };
 
 export function getShorofLesson(topicId: string): LessonContent | undefined {

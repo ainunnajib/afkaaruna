@@ -40,14 +40,14 @@ const nahwuTopics: TopicItem[] = [
     title: { id: 'Huruf Jar', ar: 'حروف الجر', en: 'Prepositions' },
     description: { id: 'Kata depan dan pengaruhnya', ar: 'حروف الجر وتأثيرها', en: 'Prepositions and their effects' },
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 'inna-akhawat',
     title: { id: 'Inna & Saudaranya', ar: 'إنّ وأخواتها', en: 'Inna & Sisters' },
     description: { id: 'Huruf yang menashobkan mubtada', ar: 'الحروف الناسخة للمبتدأ', en: 'Particles affecting subject' },
     progress: 0,
-    locked: true,
+    locked: false,
   },
 ];
 
@@ -78,14 +78,14 @@ const shorofTopics: TopicItem[] = [
     title: { id: 'Isim Makan', ar: 'اسم المكان', en: 'Place Noun' },
     description: { id: 'Kata benda tempat', ar: 'اسم يدل على المكان', en: 'Noun indicating place' },
     progress: 0,
-    locked: true,
+    locked: false,
   },
   {
     id: 'tashrif-fiil',
     title: { id: 'Tashrif Fi\'il', ar: 'تصريف الفعل', en: 'Verb Conjugation' },
     description: { id: 'Perubahan bentuk kata kerja', ar: 'تغيير صيغة الفعل', en: 'Changing verb forms' },
     progress: 0,
-    locked: true,
+    locked: false,
   },
 ];
 

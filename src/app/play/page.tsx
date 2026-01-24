@@ -69,7 +69,7 @@ const games: GameCard[] = [
     },
     category: 'nahwu',
     difficulty: 2,
-    available: false,
+    available: true,
   },
   {
     id: 'story-mode',
@@ -87,7 +87,7 @@ const games: GameCard[] = [
     },
     category: 'nahwu',
     difficulty: 3,
-    available: false,
+    available: true,
   },
   {
     id: 'conjugation-race',
@@ -105,7 +105,7 @@ const games: GameCard[] = [
     },
     category: 'shorof',
     difficulty: 2,
-    available: false,
+    available: true,
   },
   {
     id: 'irab-analyzer',
@@ -123,7 +123,7 @@ const games: GameCard[] = [
     },
     category: 'nahwu',
     difficulty: 3,
-    available: false,
+    available: true,
   },
 ];
 

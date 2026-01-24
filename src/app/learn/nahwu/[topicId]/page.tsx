@@ -4,7 +4,9 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/hooks/useLanguage';
 import { Card, CardContent, Button } from '@/components/ui';
+import { LessonQuiz } from '@/components/games';
 import { getNahwuLesson } from '@/data/nahwu/lessons';
+import { getLessonQuiz } from '@/data/lesson-quiz-questions';
 import { ArrowLeft, BookOpen, Lightbulb, CheckCircle, Gamepad2 } from 'lucide-react';
 
 export default function NahwuTopicPage() {
@@ -13,6 +15,7 @@ export default function NahwuTopicPage() {
   const { language, t } = useLanguage();
 
   const lesson = getNahwuLesson(topicId);
+  const quizQuestions = getLessonQuiz(topicId);
 
   if (!lesson) {
     return (
@@ -139,6 +142,13 @@ export default function NahwuTopicPage() {
             </Card>
           ))}
         </div>
+
+        {/* Lesson Quiz */}
+        {quizQuestions.length > 0 && (
+          <div className="mt-8">
+            <LessonQuiz questions={quizQuestions} />
+          </div>
+        )}
 
         {/* Navigation */}
         <div className="mt-8 flex justify-between">
